@@ -18,72 +18,6 @@ A modern web application for managing Amazon S3 buckets, uploading files, and co
 
 ---
 
-## Prerequisites
-
-1. **Python 3.8+** — [Download Python](https://www.python.org/downloads/)
-2. **AWS Account** — [Create an AWS Account](https://aws.amazon.com/)
-3. **AWS CLI** (recommended) — [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-
-### AWS Credentials
-
-Configure your credentials using one of these methods:
-
-**Option A — AWS CLI (Recommended):**
-```bash
-aws configure
-# Enter your Access Key ID, Secret Access Key, and default region
-```
-
-**Option B — Environment Variables:**
-```bash
-cp .env.example .env
-# Edit .env with your AWS credentials
-```
-
-### Required IAM Permissions
-
-Attach the following IAM policy to your user/role. See the implementation plan for the full JSON policy.
-
-| Permission Group | Actions |
-|-----------------|---------|
-| Bucket Management | `s3:CreateBucket`, `s3:ListAllMyBuckets`, `s3:ListBucket`, `s3:GetBucketLocation` |
-| Object Operations | `s3:PutObject`, `s3:GetObject`, `s3:DeleteObject` |
-| ACL Operations | `s3:PutObjectAcl`, `s3:GetObjectAcl`, `s3:PutBucketAcl`, `s3:GetBucketAcl` |
-| Bucket Config | `s3:PutBucketOwnershipControls`, `s3:PutBucketPublicAccessBlock` |
-
----
-
-## Installation
-
-```bash
-# 1. Navigate to the project directory
-cd s3-operations-app
-
-# 2. (Optional) Create a virtual environment
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-# venv\Scripts\activate   # Windows
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. (Optional) Set up environment variables
-cp .env.example .env
-# Edit .env with your values
-```
-
----
-
-## Running the App
-
-```bash
-python app.py
-```
-
-The app will start at **http://localhost:5000**. Open this URL in your browser.
-
----
-
 ## Usage
 
 ### 1. Create a Bucket
@@ -116,22 +50,6 @@ The app will start at **http://localhost:5000**. Open this URL in your browser.
 | Frontend | HTML5, CSS3, Vanilla JavaScript |
 | AWS SDK | boto3 (official AWS SDK for Python) |
 | Styling | Custom CSS with glassmorphism dark theme |
-
----
-
-## Project Structure
-
-```
-s3-operations-app/
-├── app.py                  # Flask backend (API routes)
-├── requirements.txt        # Python dependencies
-├── .env.example            # Environment variable template
-├── README.md               # This file
-└── static/
-    ├── index.html          # Main UI page
-    ├── index.css           # Dark theme styles
-    └── index.js            # Frontend logic
-```
 
 ---
 
