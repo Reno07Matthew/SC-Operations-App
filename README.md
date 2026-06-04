@@ -18,30 +18,6 @@ A modern web application for managing Amazon S3 buckets, uploading files, and co
 
 ---
 
-## Usage
-
-### 1. Create a Bucket
-- Enter a globally unique bucket name (lowercase, 3-63 characters)
-- Select an AWS region
-- Click **Create Bucket**
-
-### 2. Upload Files
-- Select a target bucket from the dropdown
-- Drag and drop files into the upload zone, or click to browse
-- Click **Upload Files**
-
-### 3. Change Access Permissions
-- Select a bucket in the **Manage Access** panel
-- Objects will be listed with their current ACL
-- Choose a new ACL from the dropdown and click **Apply**
-- A verification modal confirms the change with full grant details
-
-### 4. Monitor Activity
-- The **Activity Log** panel shows timestamped entries for all operations
-- Use the **Clear** button to reset the log
-
----
-
 ## Tech Stack
 
 | Component | Technology |
